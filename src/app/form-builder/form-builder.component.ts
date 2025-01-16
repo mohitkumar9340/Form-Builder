@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';  
-import { NgIf, NgFor } from '@angular/common';  
+import { NgIf, NgFor, NgModel, FormsModule } from '@angular/common';  // Import the necessary Angular modules
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  imports: [FormsModule, NgIf, NgFor]  
+  selector: 'app-form-builder',
+  standalone: true,  // Marking this component as standalone
+  templateUrl: './form-builder.component.html',
+  styleUrls: ['./form-builder.component.css'],
+  imports: [NgIf, NgFor, NgModel, FormsModule]  // Import Angular modules here
 })
-export class AppComponent {
+export class FormBuilderComponent {
   name: string = '';
   type: string = 'text';
   required: boolean = false;
